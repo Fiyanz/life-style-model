@@ -39,7 +39,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 2. **Clone repository**:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Fiyanz/life-style-model.git
 cd life-style
 ```
 
@@ -55,11 +55,6 @@ source .venv/bin/activate  # Linux/Mac
 
 # Install dependencies
 uv pip install -r pyproject.toml
-```
-
-4. **Verifikasi instalasi**:
-```bash
-python main.py
 ```
 
 ## 📁 Struktur Proyek
@@ -79,9 +74,9 @@ life-style/
 ## 🤖 Fitur Utama
 
 ### 1. Prediksi Kalori
-- Input: Informasi makanan (nama, porsi, kategori)
+- Input: Informasi pengguna
 - Output: Estimasi kalori yang akurat
-- Model: Trained menggunakan data dari [`meal_metadata.csv`](dataset/meal_metadata.csv)
+- Model: Trained menggunakan data dari [`Final_data.csv`](dataset/meal_metadata.csv)
 
 ### 2. Rekomendasi Latihan
 - Input: Profil pengguna (usia, berat, tinggi, target)
@@ -92,7 +87,7 @@ life-style/
 
 ### Menjalankan Aplikasi
 ```bash
-python main.py
+uv run main.py
 ```
 
 ### Training Model
@@ -103,6 +98,10 @@ jupyter notebook notebook/training_model.ipynb
 
 ## 🔧 Development
 
+### Singkronisasi Dependensi
+```bash
+uv sync
+```
 ### Menambah Dependencies
 ```bash
 uv add package-name
